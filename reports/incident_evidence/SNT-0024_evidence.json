@@ -1,0 +1,212 @@
+{
+  "incident": {
+    "incident_id": "SNT-0024",
+    "start": "2023-08-13 13:54:00",
+    "end": "2023-08-13 14:08:00",
+    "flagged_minutes": 15,
+    "mean_anomaly_score": 0.710197535691039,
+    "max_anomaly_score": 0.7110308546103264,
+    "status": "requires_investigation",
+    "interpretation": "anomaly_detected_not_confirmed_failure"
+  },
+  "analysis_windows": {
+    "before": {
+      "start": "2023-08-13 12:54:00",
+      "end": "2023-08-13 13:53:00",
+      "observations": 60,
+      "expected_minute_observations": 60,
+      "sensors": {
+        "Torque": {
+          "valid_readings": 60,
+          "missing_readings": 0,
+          "mean": 0.522679,
+          "minimum": 0.019837,
+          "maximum": 3.15465,
+          "standard_deviation": 0.737825
+        },
+        "Vibration": {
+          "valid_readings": 60,
+          "missing_readings": 0,
+          "mean": 0.074988,
+          "minimum": 0.0589,
+          "maximum": 0.172794,
+          "standard_deviation": 0.025953
+        },
+        "Bearing_Temp_SolidEnd": {
+          "valid_readings": 60,
+          "missing_readings": 0,
+          "mean": 41.152344,
+          "minimum": 33.696785,
+          "maximum": 44.887188,
+          "standard_deviation": 4.861709
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "valid_readings": 60,
+          "missing_readings": 0,
+          "mean": 37.281763,
+          "minimum": 31.186633,
+          "maximum": 42.768421,
+          "standard_deviation": 5.121707
+        }
+      }
+    },
+    "during": {
+      "start": "2023-08-13 13:54:00",
+      "end": "2023-08-13 14:08:00",
+      "observations": 15,
+      "expected_minute_observations": 15,
+      "sensors": {
+        "Torque": {
+          "valid_readings": 15,
+          "missing_readings": 0,
+          "mean": 0.234022,
+          "minimum": 0.202335,
+          "maximum": 0.263836,
+          "standard_deviation": 0.018802
+        },
+        "Vibration": {
+          "valid_readings": 15,
+          "missing_readings": 0,
+          "mean": 0.061228,
+          "minimum": 0.0589,
+          "maximum": 0.085244,
+          "standard_deviation": 0.007002
+        },
+        "Bearing_Temp_SolidEnd": {
+          "valid_readings": 15,
+          "missing_readings": 0,
+          "mean": 44.987623,
+          "minimum": 44.88547,
+          "maximum": 45.136049,
+          "standard_deviation": 0.07712
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "valid_readings": 15,
+          "missing_readings": 0,
+          "mean": 42.983596,
+          "minimum": 42.828049,
+          "maximum": 43.238914,
+          "standard_deviation": 0.146814
+        }
+      }
+    },
+    "after": {
+      "start": "2023-08-13 14:09:00",
+      "end": "2023-08-13 15:08:00",
+      "observations": 60,
+      "expected_minute_observations": 60,
+      "sensors": {
+        "Torque": {
+          "valid_readings": 60,
+          "missing_readings": 0,
+          "mean": 0.336178,
+          "minimum": 0.24445,
+          "maximum": 0.404758,
+          "standard_deviation": 0.038666
+        },
+        "Vibration": {
+          "valid_readings": 60,
+          "missing_readings": 0,
+          "mean": 0.063584,
+          "minimum": 0.0589,
+          "maximum": 0.121949,
+          "standard_deviation": 0.014404
+        },
+        "Bearing_Temp_SolidEnd": {
+          "valid_readings": 60,
+          "missing_readings": 0,
+          "mean": 45.206055,
+          "minimum": 45.029226,
+          "maximum": 45.422284,
+          "standard_deviation": 0.104128
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "valid_readings": 60,
+          "missing_readings": 0,
+          "mean": 43.407323,
+          "minimum": 43.197928,
+          "maximum": 43.663584,
+          "standard_deviation": 0.123433
+        }
+      }
+    }
+  },
+  "sensor_comparison": {
+    "Torque": {
+      "before_mean": 0.522679,
+      "during_mean": 0.234022,
+      "after_mean": 0.336178,
+      "during_vs_before_percent": -55.23,
+      "after_vs_during_percent": 43.65
+    },
+    "Vibration": {
+      "before_mean": 0.074988,
+      "during_mean": 0.061228,
+      "after_mean": 0.063584,
+      "during_vs_before_percent": -18.35,
+      "after_vs_during_percent": 3.85
+    },
+    "Bearing_Temp_SolidEnd": {
+      "before_mean": 41.152344,
+      "during_mean": 44.987623,
+      "after_mean": 45.206055,
+      "during_vs_before_percent": 9.32,
+      "after_vs_during_percent": 0.49
+    },
+    "Bearing_Temp_LiquidEnd": {
+      "before_mean": 37.281763,
+      "during_mean": 42.983596,
+      "after_mean": 43.407323,
+      "during_vs_before_percent": 15.29,
+      "after_vs_during_percent": 0.99
+    }
+  },
+  "within_incident_blocks": [
+    {
+      "block_start": "2023-08-13 13:54:00",
+      "block_end": "2023-08-13 14:08:00",
+      "observations": 15,
+      "sensors": {
+        "Torque": {
+          "mean": 0.234022,
+          "minimum": 0.202335,
+          "maximum": 0.263836,
+          "valid_readings": 15
+        },
+        "Vibration": {
+          "mean": 0.061228,
+          "minimum": 0.0589,
+          "maximum": 0.085244,
+          "valid_readings": 15
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 44.987623,
+          "minimum": 44.88547,
+          "maximum": 45.136049,
+          "valid_readings": 15
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 42.983596,
+          "minimum": 42.828049,
+          "maximum": 43.238914,
+          "valid_readings": 15
+        }
+      }
+    }
+  ],
+  "findings": [
+    "SNT-0024 was flagged from 2023-08-13 13:54:00 to 2023-08-13 14:08:00.",
+    "The incident contains 15 flagged observations.",
+    "Torque: before mean=0.522679; during mean=0.234022; after mean=0.336178; during-vs-before change=-55.23%.",
+    "Vibration: before mean=0.074988; during mean=0.061228; after mean=0.063584; during-vs-before change=-18.35%.",
+    "Bearing_Temp_SolidEnd: before mean=41.152344; during mean=44.987623; after mean=45.206055; during-vs-before change=9.32%.",
+    "Bearing_Temp_LiquidEnd: before mean=37.281763; during mean=42.983596; after mean=43.407323; during-vs-before change=15.29%.",
+    "The incident was divided into 1 consecutive 60-minute analysis blocks.",
+    "Sensor changes and recovery comparisons are descriptive evidence. They do not independently confirm equipment failure or its cause."
+  ],
+  "conclusion": {
+    "confirmed_failure": false,
+    "reason": "Available anomaly predictions and sensor measurements do not independently confirm an equipment failure.",
+    "requires_human_review": true
+  }
+}

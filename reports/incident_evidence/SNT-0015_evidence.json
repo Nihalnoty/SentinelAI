@@ -1,0 +1,2072 @@
+{
+  "incident": {
+    "incident_id": "SNT-0015",
+    "start": "2022-12-26 07:41:00",
+    "end": "2022-12-28 19:48:00",
+    "flagged_minutes": 3608,
+    "mean_anomaly_score": 0.7325384178866404,
+    "max_anomaly_score": 0.7541406087303789,
+    "status": "requires_investigation",
+    "interpretation": "anomaly_detected_not_confirmed_failure"
+  },
+  "analysis_windows": {
+    "before": {
+      "start": "2022-12-26 06:41:00",
+      "end": "2022-12-26 07:40:00",
+      "observations": 60,
+      "expected_minute_observations": 60,
+      "sensors": {
+        "Torque": {
+          "valid_readings": 60,
+          "missing_readings": 0,
+          "mean": 2.982837,
+          "minimum": 2.949714,
+          "maximum": 3.01789,
+          "standard_deviation": 0.020538
+        },
+        "Vibration": {
+          "valid_readings": 60,
+          "missing_readings": 0,
+          "mean": 0.131735,
+          "minimum": 0.129091,
+          "maximum": 0.13697,
+          "standard_deviation": 0.002777
+        },
+        "Bearing_Temp_SolidEnd": {
+          "valid_readings": 60,
+          "missing_readings": 0,
+          "mean": 29.983165,
+          "minimum": 29.538942,
+          "maximum": 30.473335,
+          "standard_deviation": 0.259446
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "valid_readings": 60,
+          "missing_readings": 0,
+          "mean": 23.250906,
+          "minimum": 22.910534,
+          "maximum": 23.686519,
+          "standard_deviation": 0.229619
+        }
+      }
+    },
+    "during": {
+      "start": "2022-12-26 07:41:00",
+      "end": "2022-12-28 19:48:00",
+      "observations": 3608,
+      "expected_minute_observations": 3608,
+      "sensors": {
+        "Torque": {
+          "valid_readings": 3608,
+          "missing_readings": 0,
+          "mean": 2.831759,
+          "minimum": 2.268623,
+          "maximum": 11.958801,
+          "standard_deviation": 0.77931
+        },
+        "Vibration": {
+          "valid_readings": 3608,
+          "missing_readings": 0,
+          "mean": 0.281306,
+          "minimum": 0.05196,
+          "maximum": 10.773175,
+          "standard_deviation": 1.067834
+        },
+        "Bearing_Temp_SolidEnd": {
+          "valid_readings": 3608,
+          "missing_readings": 0,
+          "mean": 20.450219,
+          "minimum": 17.238672,
+          "maximum": 45.938558,
+          "standard_deviation": 2.635755
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "valid_readings": 3608,
+          "missing_readings": 0,
+          "mean": 17.187996,
+          "minimum": 13.55125,
+          "maximum": 45.730984,
+          "standard_deviation": 2.920033
+        }
+      }
+    },
+    "after": {
+      "start": "2022-12-28 19:49:00",
+      "end": "2022-12-28 20:48:00",
+      "observations": 60,
+      "expected_minute_observations": 60,
+      "sensors": {
+        "Torque": {
+          "valid_readings": 60,
+          "missing_readings": 0,
+          "mean": 7.375841,
+          "minimum": 7.092393,
+          "maximum": 7.94934,
+          "standard_deviation": 0.230341
+        },
+        "Vibration": {
+          "valid_readings": 60,
+          "missing_readings": 0,
+          "mean": 9.995108,
+          "minimum": 9.749905,
+          "maximum": 10.255589,
+          "standard_deviation": 0.094501
+        },
+        "Bearing_Temp_SolidEnd": {
+          "valid_readings": 60,
+          "missing_readings": 0,
+          "mean": 55.052722,
+          "minimum": 46.477303,
+          "maximum": 60.654541,
+          "standard_deviation": 4.204023
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "valid_readings": 60,
+          "missing_readings": 0,
+          "mean": 53.75097,
+          "minimum": 46.095306,
+          "maximum": 59.089035,
+          "standard_deviation": 3.81476
+        }
+      }
+    }
+  },
+  "sensor_comparison": {
+    "Torque": {
+      "before_mean": 2.982837,
+      "during_mean": 2.831759,
+      "after_mean": 7.375841,
+      "during_vs_before_percent": -5.06,
+      "after_vs_during_percent": 160.47
+    },
+    "Vibration": {
+      "before_mean": 0.131735,
+      "during_mean": 0.281306,
+      "after_mean": 9.995108,
+      "during_vs_before_percent": 113.54,
+      "after_vs_during_percent": 3453.11
+    },
+    "Bearing_Temp_SolidEnd": {
+      "before_mean": 29.983165,
+      "during_mean": 20.450219,
+      "after_mean": 55.052722,
+      "during_vs_before_percent": -31.79,
+      "after_vs_during_percent": 169.2
+    },
+    "Bearing_Temp_LiquidEnd": {
+      "before_mean": 23.250906,
+      "during_mean": 17.187996,
+      "after_mean": 53.75097,
+      "during_vs_before_percent": -26.08,
+      "after_vs_during_percent": 212.72
+    }
+  },
+  "within_incident_blocks": [
+    {
+      "block_start": "2022-12-26 07:41:00",
+      "block_end": "2022-12-26 08:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.989269,
+          "minimum": 2.950928,
+          "maximum": 3.016041,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.132048,
+          "minimum": 0.129091,
+          "maximum": 0.137443,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 29.119665,
+          "minimum": 27.44274,
+          "maximum": 29.740805,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 22.604171,
+          "minimum": 22.07599,
+          "maximum": 22.909896,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-26 08:41:00",
+      "block_end": "2022-12-26 09:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.976928,
+          "minimum": 2.948879,
+          "maximum": 3.012208,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.13152,
+          "minimum": 0.129091,
+          "maximum": 0.136742,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 24.577581,
+          "minimum": 23.405813,
+          "maximum": 27.484856,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 20.990166,
+          "minimum": 20.181349,
+          "maximum": 22.036308,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-26 09:41:00",
+      "block_end": "2022-12-26 10:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.987814,
+          "minimum": 2.948043,
+          "maximum": 3.046236,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.107964,
+          "minimum": 0.05196,
+          "maximum": 0.843885,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 23.583009,
+          "minimum": 22.382349,
+          "maximum": 24.318876,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 17.910104,
+          "minimum": 15.665029,
+          "maximum": 20.163427,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-26 10:41:00",
+      "block_end": "2022-12-26 11:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.990746,
+          "minimum": 2.912947,
+          "maximum": 3.050823,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.142701,
+          "minimum": 0.095694,
+          "maximum": 0.279948,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 22.769434,
+          "minimum": 21.518689,
+          "maximum": 23.252402,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 16.486636,
+          "minimum": 16.283096,
+          "maximum": 16.67219,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-26 11:41:00",
+      "block_end": "2022-12-26 12:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.964804,
+          "minimum": 2.915211,
+          "maximum": 3.015586,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.129509,
+          "minimum": 0.129091,
+          "maximum": 0.135934,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 22.113873,
+          "minimum": 21.263447,
+          "maximum": 23.19031,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 16.666486,
+          "minimum": 16.270004,
+          "maximum": 17.278721,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-26 12:41:00",
+      "block_end": "2022-12-26 13:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.969372,
+          "minimum": 2.916371,
+          "maximum": 3.021744,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.128002,
+          "minimum": 0.067771,
+          "maximum": 0.137413,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 22.905556,
+          "minimum": 22.202432,
+          "maximum": 23.252402,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 17.268379,
+          "minimum": 17.085352,
+          "maximum": 17.577295,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-26 13:41:00",
+      "block_end": "2022-12-26 14:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.954562,
+          "minimum": 2.877851,
+          "maximum": 3.041106,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.134947,
+          "minimum": 0.129091,
+          "maximum": 0.213503,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 21.729544,
+          "minimum": 20.212864,
+          "maximum": 23.187611,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 16.276637,
+          "minimum": 15.072547,
+          "maximum": 17.17409,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-26 14:41:00",
+      "block_end": "2022-12-26 15:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.960974,
+          "minimum": 2.914519,
+          "maximum": 3.007267,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.137018,
+          "minimum": 0.129091,
+          "maximum": 0.205386,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 21.519527,
+          "minimum": 20.590143,
+          "maximum": 22.071222,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 16.288318,
+          "minimum": 15.914402,
+          "maximum": 16.513557,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-26 15:41:00",
+      "block_end": "2022-12-26 16:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.911912,
+          "minimum": 2.846723,
+          "maximum": 2.983139,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.150988,
+          "minimum": 0.129581,
+          "maximum": 0.207828,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 20.540176,
+          "minimum": 19.534762,
+          "maximum": 21.700389,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 15.275924,
+          "minimum": 14.80119,
+          "maximum": 15.895076,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-26 16:41:00",
+      "block_end": "2022-12-26 17:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.98357,
+          "minimum": 2.782592,
+          "maximum": 3.113773,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.154653,
+          "minimum": 0.129537,
+          "maximum": 0.239811,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 19.97057,
+          "minimum": 19.02943,
+          "maximum": 20.634996,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 14.87532,
+          "minimum": 14.690347,
+          "maximum": 15.010229,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-26 17:41:00",
+      "block_end": "2022-12-26 18:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.909609,
+          "minimum": 2.879563,
+          "maximum": 3.018234,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.132327,
+          "minimum": 0.129091,
+          "maximum": 0.190405,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 20.727277,
+          "minimum": 20.616465,
+          "maximum": 20.855726,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 14.841943,
+          "minimum": 14.630008,
+          "maximum": 15.187385,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-26 18:41:00",
+      "block_end": "2022-12-26 19:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.913149,
+          "minimum": 2.835737,
+          "maximum": 2.946911,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.154042,
+          "minimum": 0.129091,
+          "maximum": 0.207205,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 20.400251,
+          "minimum": 18.987047,
+          "maximum": 21.042543,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 14.728703,
+          "minimum": 13.866695,
+          "maximum": 15.386741,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-26 19:41:00",
+      "block_end": "2022-12-26 20:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.867882,
+          "minimum": 2.84502,
+          "maximum": 2.912947,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.131617,
+          "minimum": 0.129091,
+          "maximum": 0.179059,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 18.885941,
+          "minimum": 17.969635,
+          "maximum": 19.184588,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 14.13165,
+          "minimum": 13.744461,
+          "maximum": 14.37094,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-26 20:41:00",
+      "block_end": "2022-12-26 21:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.869353,
+          "minimum": 2.80766,
+          "maximum": 2.946693,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.131175,
+          "minimum": 0.129091,
+          "maximum": 0.13715,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 18.138614,
+          "minimum": 17.751851,
+          "maximum": 18.694772,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 13.8757,
+          "minimum": 13.55125,
+          "maximum": 14.2122,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-26 21:41:00",
+      "block_end": "2022-12-26 22:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.922607,
+          "minimum": 2.882186,
+          "maximum": 2.948043,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.12949,
+          "minimum": 0.129091,
+          "maximum": 0.136349,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 18.92401,
+          "minimum": 18.671549,
+          "maximum": 19.115931,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 14.166852,
+          "minimum": 13.82728,
+          "maximum": 14.416995,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-26 22:41:00",
+      "block_end": "2022-12-26 23:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.918024,
+          "minimum": 2.88203,
+          "maximum": 2.948043,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.130072,
+          "minimum": 0.129091,
+          "maximum": 0.137351,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 18.903161,
+          "minimum": 18.680154,
+          "maximum": 19.07821,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 14.0819,
+          "minimum": 13.851577,
+          "maximum": 14.235994,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-26 23:41:00",
+      "block_end": "2022-12-27 00:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.896733,
+          "minimum": 2.845946,
+          "maximum": 2.943071,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.130146,
+          "minimum": 0.129091,
+          "maximum": 0.137257,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 18.818935,
+          "minimum": 18.588947,
+          "maximum": 19.004206,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 14.138198,
+          "minimum": 13.783786,
+          "maximum": 14.537733,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 00:41:00",
+      "block_end": "2022-12-27 01:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.928897,
+          "minimum": 2.912947,
+          "maximum": 2.948043,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.129548,
+          "minimum": 0.129091,
+          "maximum": 0.137435,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 19.15557,
+          "minimum": 18.995516,
+          "maximum": 19.226368,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 14.567853,
+          "minimum": 14.461043,
+          "maximum": 14.656131,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 01:41:00",
+      "block_end": "2022-12-27 02:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.928074,
+          "minimum": 2.88365,
+          "maximum": 2.948043,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.129091,
+          "minimum": 0.129091,
+          "maximum": 0.129091,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 19.288707,
+          "minimum": 19.16661,
+          "maximum": 19.355052,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 14.772138,
+          "minimum": 14.633783,
+          "maximum": 14.839093,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 02:41:00",
+      "block_end": "2022-12-27 03:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.930011,
+          "minimum": 2.912947,
+          "maximum": 2.948043,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.129782,
+          "minimum": 0.129091,
+          "maximum": 0.137341,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 19.308594,
+          "minimum": 19.263134,
+          "maximum": 19.34435,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 14.880893,
+          "minimum": 14.797679,
+          "maximum": 14.932479,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 03:41:00",
+      "block_end": "2022-12-27 04:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.898492,
+          "minimum": 2.842756,
+          "maximum": 2.947368,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.129958,
+          "minimum": 0.129091,
+          "maximum": 0.137585,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 19.195063,
+          "minimum": 18.909886,
+          "maximum": 19.397946,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 14.59635,
+          "minimum": 14.248599,
+          "maximum": 14.881208,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 04:41:00",
+      "block_end": "2022-12-27 05:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.890578,
+          "minimum": 2.842756,
+          "maximum": 2.94496,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.130567,
+          "minimum": 0.129091,
+          "maximum": 0.137242,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 19.052884,
+          "minimum": 18.94187,
+          "maximum": 19.155532,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 14.708872,
+          "minimum": 14.463241,
+          "maximum": 14.920506,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 05:41:00",
+      "block_end": "2022-12-27 06:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.896065,
+          "minimum": 2.879201,
+          "maximum": 2.912947,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.130109,
+          "minimum": 0.129091,
+          "maximum": 0.136898,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 19.03542,
+          "minimum": 18.939499,
+          "maximum": 19.111573,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 14.963941,
+          "minimum": 14.806122,
+          "maximum": 15.099741,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 06:41:00",
+      "block_end": "2022-12-27 07:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.896288,
+          "minimum": 2.877851,
+          "maximum": 2.912947,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.13133,
+          "minimum": 0.129091,
+          "maximum": 0.189688,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 18.895513,
+          "minimum": 18.799114,
+          "maximum": 18.999256,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 14.871991,
+          "minimum": 14.769238,
+          "maximum": 14.974594,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 07:41:00",
+      "block_end": "2022-12-27 08:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.922026,
+          "minimum": 2.879124,
+          "maximum": 2.948043,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.129604,
+          "minimum": 0.129091,
+          "maximum": 0.136788,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 18.888575,
+          "minimum": 18.799114,
+          "maximum": 19.009689,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 15.338566,
+          "minimum": 14.893416,
+          "maximum": 15.775363,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 08:41:00",
+      "block_end": "2022-12-27 09:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.91029,
+          "minimum": 2.843372,
+          "maximum": 2.948043,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.150641,
+          "minimum": 0.129091,
+          "maximum": 0.247501,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 19.090474,
+          "minimum": 18.960556,
+          "maximum": 19.254444,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 15.960675,
+          "minimum": 15.655756,
+          "maximum": 16.410865,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 09:41:00",
+      "block_end": "2022-12-27 10:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.913808,
+          "minimum": 2.877851,
+          "maximum": 2.948043,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.132785,
+          "minimum": 0.129091,
+          "maximum": 0.19638,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 19.478819,
+          "minimum": 19.245338,
+          "maximum": 19.765556,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 16.98864,
+          "minimum": 16.399556,
+          "maximum": 17.611679,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 10:41:00",
+      "block_end": "2022-12-27 11:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.928749,
+          "minimum": 2.877851,
+          "maximum": 3.016041,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.152658,
+          "minimum": 0.129091,
+          "maximum": 0.207185,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 20.172273,
+          "minimum": 19.738817,
+          "maximum": 20.635314,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 18.707564,
+          "minimum": 17.642097,
+          "maximum": 19.386108,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 11:41:00",
+      "block_end": "2022-12-27 12:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 3.027872,
+          "minimum": 2.983139,
+          "maximum": 3.082269,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.145926,
+          "minimum": 0.129091,
+          "maximum": 0.2057,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 21.117122,
+          "minimum": 20.627451,
+          "maximum": 21.486716,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 19.659228,
+          "minimum": 19.390249,
+          "maximum": 19.977065,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 12:41:00",
+      "block_end": "2022-12-27 13:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.89874,
+          "minimum": 2.772564,
+          "maximum": 3.018234,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.133086,
+          "minimum": 0.129091,
+          "maximum": 0.137417,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 21.735475,
+          "minimum": 21.481041,
+          "maximum": 22.113995,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 19.839812,
+          "minimum": 18.8748,
+          "maximum": 20.316595,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 13:41:00",
+      "block_end": "2022-12-27 14:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.748668,
+          "minimum": 2.667277,
+          "maximum": 2.842756,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.135617,
+          "minimum": 0.129091,
+          "maximum": 0.179751,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 22.236778,
+          "minimum": 22.049286,
+          "maximum": 22.368391,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 19.302103,
+          "minimum": 18.935934,
+          "maximum": 19.684137,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 14:41:00",
+      "block_end": "2022-12-27 15:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.73571,
+          "minimum": 2.683154,
+          "maximum": 2.80757,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.136052,
+          "minimum": 0.129408,
+          "maximum": 0.201447,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 22.375568,
+          "minimum": 22.340832,
+          "maximum": 22.435951,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 18.909089,
+          "minimum": 18.662528,
+          "maximum": 19.085375,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 15:41:00",
+      "block_end": "2022-12-27 16:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.787661,
+          "minimum": 2.738818,
+          "maximum": 2.822701,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.135731,
+          "minimum": 0.129091,
+          "maximum": 0.166609,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 22.242828,
+          "minimum": 22.10544,
+          "maximum": 22.354654,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 18.89058,
+          "minimum": 18.647745,
+          "maximum": 19.065759,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 16:41:00",
+      "block_end": "2022-12-27 17:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.902618,
+          "minimum": 2.704388,
+          "maximum": 3.851682,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.136539,
+          "minimum": 0.129091,
+          "maximum": 0.215097,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 21.941087,
+          "minimum": 21.71463,
+          "maximum": 22.147843,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 18.585284,
+          "minimum": 18.282458,
+          "maximum": 18.689861,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 17:41:00",
+      "block_end": "2022-12-27 18:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 3.006741,
+          "minimum": 2.819359,
+          "maximum": 3.236439,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.134377,
+          "minimum": 0.129091,
+          "maximum": 0.190345,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 21.457027,
+          "minimum": 21.193303,
+          "maximum": 21.712673,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 17.96409,
+          "minimum": 17.674254,
+          "maximum": 18.29398,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 18:41:00",
+      "block_end": "2022-12-27 19:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.936875,
+          "minimum": 2.912947,
+          "maximum": 2.983139,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.141692,
+          "minimum": 0.129091,
+          "maximum": 0.320862,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 20.958216,
+          "minimum": 20.729382,
+          "maximum": 21.176176,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 18.335075,
+          "minimum": 17.409933,
+          "maximum": 19.144334,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 19:41:00",
+      "block_end": "2022-12-27 20:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.576792,
+          "minimum": 2.408849,
+          "maximum": 2.97144,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.138105,
+          "minimum": 0.129295,
+          "maximum": 0.205328,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 20.596337,
+          "minimum": 20.455669,
+          "maximum": 20.756889,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 18.397166,
+          "minimum": 18.310825,
+          "maximum": 18.5214,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 20:41:00",
+      "block_end": "2022-12-27 21:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.425045,
+          "minimum": 2.407874,
+          "maximum": 2.442525,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.134472,
+          "minimum": 0.129091,
+          "maximum": 0.19283,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 20.365591,
+          "minimum": 20.300602,
+          "maximum": 20.466101,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 18.246445,
+          "minimum": 18.185563,
+          "maximum": 18.310825,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 21:41:00",
+      "block_end": "2022-12-27 22:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.449714,
+          "minimum": 2.408709,
+          "maximum": 2.478065,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.1335,
+          "minimum": 0.129533,
+          "maximum": 0.137636,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 20.209519,
+          "minimum": 20.110922,
+          "maximum": 20.324,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 18.141339,
+          "minimum": 18.048981,
+          "maximum": 18.216431,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 22:41:00",
+      "block_end": "2022-12-27 23:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.452276,
+          "minimum": 2.410114,
+          "maximum": 2.487026,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.133701,
+          "minimum": 0.129304,
+          "maximum": 0.137507,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 19.989604,
+          "minimum": 19.781223,
+          "maximum": 20.174716,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 17.954949,
+          "minimum": 17.815471,
+          "maximum": 18.087347,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-27 23:41:00",
+      "block_end": "2022-12-28 00:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.40556,
+          "minimum": 2.373525,
+          "maximum": 2.441443,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.133261,
+          "minimum": 0.129091,
+          "maximum": 0.137636,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 19.631406,
+          "minimum": 19.412813,
+          "maximum": 19.838255,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 17.672802,
+          "minimum": 17.543602,
+          "maximum": 17.838408,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 00:41:00",
+      "block_end": "2022-12-28 01:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.39044,
+          "minimum": 2.351228,
+          "maximum": 2.407127,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.138284,
+          "minimum": 0.129091,
+          "maximum": 0.204354,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 19.301269,
+          "minimum": 19.164275,
+          "maximum": 19.431092,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 17.444925,
+          "minimum": 17.326757,
+          "maximum": 17.570094,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 01:41:00",
+      "block_end": "2022-12-28 02:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.355876,
+          "minimum": 2.337802,
+          "maximum": 2.40695,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.132233,
+          "minimum": 0.129091,
+          "maximum": 0.137605,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 18.98253,
+          "minimum": 18.872092,
+          "maximum": 19.172301,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 17.242931,
+          "minimum": 17.118433,
+          "maximum": 17.359396,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 02:41:00",
+      "block_end": "2022-12-28 03:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.355097,
+          "minimum": 2.337682,
+          "maximum": 2.372778,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.130039,
+          "minimum": 0.129091,
+          "maximum": 0.137345,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 18.727708,
+          "minimum": 18.629631,
+          "maximum": 18.836718,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 17.044861,
+          "minimum": 16.944839,
+          "maximum": 17.157244,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 03:41:00",
+      "block_end": "2022-12-28 04:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.354,
+          "minimum": 2.323092,
+          "maximum": 2.371107,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.130483,
+          "minimum": 0.129091,
+          "maximum": 0.137517,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 18.531524,
+          "minimum": 18.407103,
+          "maximum": 18.650187,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 16.788553,
+          "minimum": 16.601963,
+          "maximum": 16.944839,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 04:41:00",
+      "block_end": "2022-12-28 05:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.324057,
+          "minimum": 2.302586,
+          "maximum": 2.368917,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.129222,
+          "minimum": 0.129091,
+          "maximum": 0.136907,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 18.153819,
+          "minimum": 17.978325,
+          "maximum": 18.42298,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 16.509344,
+          "minimum": 16.392095,
+          "maximum": 16.634813,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 05:41:00",
+      "block_end": "2022-12-28 06:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.31954,
+          "minimum": 2.302586,
+          "maximum": 2.337682,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.130501,
+          "minimum": 0.129091,
+          "maximum": 0.136827,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 17.926129,
+          "minimum": 17.816351,
+          "maximum": 18.054474,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 16.288388,
+          "minimum": 16.166328,
+          "maximum": 16.428096,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 06:41:00",
+      "block_end": "2022-12-28 07:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.295453,
+          "minimum": 2.268623,
+          "maximum": 2.334837,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.129643,
+          "minimum": 0.129091,
+          "maximum": 0.136655,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 17.619788,
+          "minimum": 17.439711,
+          "maximum": 17.853819,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 16.072726,
+          "minimum": 15.954208,
+          "maximum": 16.221561,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 07:41:00",
+      "block_end": "2022-12-28 08:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.301647,
+          "minimum": 2.269162,
+          "maximum": 2.337682,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.135412,
+          "minimum": 0.129091,
+          "maximum": 0.20165,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 17.32757,
+          "minimum": 17.238672,
+          "maximum": 17.466671,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 15.861428,
+          "minimum": 15.786742,
+          "maximum": 15.946212,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 08:41:00",
+      "block_end": "2022-12-28 09:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.48743,
+          "minimum": 2.30766,
+          "maximum": 2.605962,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.135782,
+          "minimum": 0.129091,
+          "maximum": 0.205719,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 17.422495,
+          "minimum": 17.310139,
+          "maximum": 17.576562,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 15.812106,
+          "minimum": 15.742011,
+          "maximum": 15.938149,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 09:41:00",
+      "block_end": "2022-12-28 10:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.492062,
+          "minimum": 2.442969,
+          "maximum": 2.548257,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.181933,
+          "minimum": 0.130758,
+          "maximum": 0.408565,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 17.900504,
+          "minimum": 17.598957,
+          "maximum": 18.279087,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 16.226035,
+          "minimum": 15.911078,
+          "maximum": 16.53787,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 10:41:00",
+      "block_end": "2022-12-28 11:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.609468,
+          "minimum": 2.462767,
+          "maximum": 2.737468,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.224706,
+          "minimum": 0.129338,
+          "maximum": 0.490564,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 18.815707,
+          "minimum": 18.308069,
+          "maximum": 19.308257,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 16.864636,
+          "minimum": 16.548623,
+          "maximum": 17.180785,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 11:41:00",
+      "block_end": "2022-12-28 12:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.747486,
+          "minimum": 2.702373,
+          "maximum": 2.807044,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.456895,
+          "minimum": 0.130101,
+          "maximum": 0.593881,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 19.800066,
+          "minimum": 19.341014,
+          "maximum": 20.183067,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 17.461838,
+          "minimum": 17.191819,
+          "maximum": 17.717696,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 12:41:00",
+      "block_end": "2022-12-28 13:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.598458,
+          "minimum": 2.44358,
+          "maximum": 2.736507,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.306975,
+          "minimum": 0.129091,
+          "maximum": 0.593881,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 20.445645,
+          "minimum": 20.175154,
+          "maximum": 20.792799,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 17.99565,
+          "minimum": 17.733791,
+          "maximum": 18.263663,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 13:41:00",
+      "block_end": "2022-12-28 14:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.449889,
+          "minimum": 2.384477,
+          "maximum": 2.476394,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.140606,
+          "minimum": 0.129227,
+          "maximum": 0.203606,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 20.979752,
+          "minimum": 20.82297,
+          "maximum": 21.149498,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 18.530556,
+          "minimum": 18.28359,
+          "maximum": 18.744572,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 14:41:00",
+      "block_end": "2022-12-28 15:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.3941,
+          "minimum": 2.342069,
+          "maximum": 2.439627,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.331009,
+          "minimum": 0.129091,
+          "maximum": 3.122542,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 21.216808,
+          "minimum": 21.127583,
+          "maximum": 21.298542,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 18.883389,
+          "minimum": 18.756024,
+          "maximum": 18.967939,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 15:41:00",
+      "block_end": "2022-12-28 16:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.416746,
+          "minimum": 2.338746,
+          "maximum": 2.478065,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.464861,
+          "minimum": 0.129091,
+          "maximum": 5.885728,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 20.998379,
+          "minimum": 20.804586,
+          "maximum": 21.15053,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 18.935295,
+          "minimum": 18.839924,
+          "maximum": 19.000335,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 16:41:00",
+      "block_end": "2022-12-28 17:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 2.897088,
+          "minimum": 2.446479,
+          "maximum": 11.820859,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.54138,
+          "minimum": 0.396246,
+          "maximum": 4.711986,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 20.736674,
+          "minimum": 20.446327,
+          "maximum": 21.368734,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 19.01761,
+          "minimum": 18.605631,
+          "maximum": 20.782187,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 17:41:00",
+      "block_end": "2022-12-28 18:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 3.338029,
+          "minimum": 2.810157,
+          "maximum": 9.662012,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 0.48789,
+          "minimum": 0.381964,
+          "maximum": 2.490089,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 21.034475,
+          "minimum": 20.660105,
+          "maximum": 21.709163,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 19.660139,
+          "minimum": 19.144011,
+          "maximum": 21.268499,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 18:41:00",
+      "block_end": "2022-12-28 19:40:00",
+      "observations": 60,
+      "sensors": {
+        "Torque": {
+          "mean": 6.69423,
+          "minimum": 2.990158,
+          "maximum": 11.958801,
+          "valid_readings": 60
+        },
+        "Vibration": {
+          "mean": 5.718339,
+          "minimum": 0.437064,
+          "maximum": 10.773175,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 27.861827,
+          "minimum": 21.439902,
+          "maximum": 42.302891,
+          "valid_readings": 60
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 28.146198,
+          "minimum": 20.114443,
+          "maximum": 42.687481,
+          "valid_readings": 60
+        }
+      }
+    },
+    {
+      "block_start": "2022-12-28 19:41:00",
+      "block_end": "2022-12-28 19:48:00",
+      "observations": 8,
+      "sensors": {
+        "Torque": {
+          "mean": 8.078488,
+          "minimum": 7.971567,
+          "maximum": 8.215153,
+          "valid_readings": 8
+        },
+        "Vibration": {
+          "mean": 9.999935,
+          "minimum": 9.8704,
+          "maximum": 10.17319,
+          "valid_readings": 8
+        },
+        "Bearing_Temp_SolidEnd": {
+          "mean": 44.336887,
+          "minimum": 42.743156,
+          "maximum": 45.938558,
+          "valid_readings": 8
+        },
+        "Bearing_Temp_LiquidEnd": {
+          "mean": 44.41744,
+          "minimum": 43.084208,
+          "maximum": 45.730984,
+          "valid_readings": 8
+        }
+      }
+    }
+  ],
+  "findings": [
+    "SNT-0015 was flagged from 2022-12-26 07:41:00 to 2022-12-28 19:48:00.",
+    "The incident contains 3608 flagged observations.",
+    "Torque: before mean=2.982837; during mean=2.831759; after mean=7.375841; during-vs-before change=-5.06%.",
+    "Vibration: before mean=0.131735; during mean=0.281306; after mean=9.995108; during-vs-before change=113.54%.",
+    "Bearing_Temp_SolidEnd: before mean=29.983165; during mean=20.450219; after mean=55.052722; during-vs-before change=-31.79%.",
+    "Bearing_Temp_LiquidEnd: before mean=23.250906; during mean=17.187996; after mean=53.75097; during-vs-before change=-26.08%.",
+    "The incident was divided into 61 consecutive 60-minute analysis blocks.",
+    "Sensor changes and recovery comparisons are descriptive evidence. They do not independently confirm equipment failure or its cause."
+  ],
+  "conclusion": {
+    "confirmed_failure": false,
+    "reason": "Available anomaly predictions and sensor measurements do not independently confirm an equipment failure.",
+    "requires_human_review": true
+  }
+}

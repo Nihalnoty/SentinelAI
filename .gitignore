@@ -34,8 +34,12 @@ models/
 .DS_Store
 Thumbs.db
 
-# Logs
+# Logs and temporary files
 *.log
-
-# Temporary files
 *.tmp
+
+# Large generated anomaly prediction reports
+reports/anomaly_results.csv
+reports/anomalies_three_sensors.csv
+reports/anomalies_four_sensors.csv
+reports/temporal_anomaly_results.csv
