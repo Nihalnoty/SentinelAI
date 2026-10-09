@@ -1,5 +1,4 @@
-
-# SentinelAI — Industrial Failure Intelligence System
+﻿# SentinelAI - Industrial Failure Intelligence System
 
 SentinelAI is an industrial AI project designed to detect unusual equipment behaviour and support evidence-based investigation of potential failures.
 
@@ -72,20 +71,20 @@ RAG, LLM-based investigation, agent orchestration, evaluation, and dashboard tec
 
 ```text
 SentinelAI/
-├── data/
-│   ├── raw/
-│   └── processed/
-├── reports/
-│   ├── figures/
-│   └── incident_evidence/
-├── src/
-│   ├── analysis/
-│   ├── data/
-│   ├── evidence/
-│   └── ml/
-├── requirements.txt
-├── .gitignore
-└── README.md
+â”œâ”€â”€ data/
+â”‚   â”œâ”€â”€ raw/
+â”‚   â””â”€â”€ processed/
+â”œâ”€â”€ reports/
+â”‚   â”œâ”€â”€ figures/
+â”‚   â””â”€â”€ incident_evidence/
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ analysis/
+â”‚   â”œâ”€â”€ data/
+â”‚   â”œâ”€â”€ evidence/
+â”‚   â””â”€â”€ ml/
+â”œâ”€â”€ requirements.txt
+â”œâ”€â”€ .gitignore
+â””â”€â”€ README.md
 
 
 SentinelAI is an industrial AI system designed to detect abnormal equipment behavior and support evidence-based failure investigation.
@@ -124,43 +123,43 @@ The system combines:
 
 Industrial Sensor Data
 
-&#x20;       ↓
+&#x20;       â†“
 
 Anomaly Detection
 
-&#x20;       ↓
+&#x20;       â†“
 
 Incident Detection
 
-&#x20;       ↓
+&#x20;       â†“
 
 Investigation Agent
 
-&#x20;       ↓
+&#x20;       â†“
 
 Sensor / History / Knowledge Tools
 
-&#x20;       ↓
+&#x20;       â†“
 
 RAG + Evidence Retrieval
 
-&#x20;       ↓
+&#x20;       â†“
 
 Evidence Analysis
 
-&#x20;       ↓
+&#x20;       â†“
 
 Possible Root Causes
 
-&#x20;       ↓
+&#x20;       â†“
 
 Evidence-Based Recommendation
 
-&#x20;       ↓
+&#x20;       â†“
 
 Investigation Report
 
-&#x20;       ↓
+&#x20;       â†“
 
 Dashboard
 
@@ -203,4 +202,6 @@ Dataset and architecture will be validated before implementation.
 \- Avoid unsupported conclusions
 
 \- Keep the system reproducible
+
+
 
