@@ -1,0 +1,36 @@
+
+[
+  {
+    "query": "abnormal vibration",
+    "relevant_chunk_ids": [
+      "centrifuge_maintenance.txt::0",
+      "centrifuge_maintenance.txt::1"
+    ]
+  },
+  {
+    "query": "mounting bolts",
+    "relevant_chunk_ids": [
+      "centrifuge_maintenance.txt::1"
+    ]
+  },
+  {
+    "query": "bearing condition",
+    "relevant_chunk_ids": [
+      "centrifuge_maintenance.txt::1"
+    ]
+  },
+  {
+    "query": "What should be checked if the machine shakes?",
+    "relevant_chunk_ids": [
+      "centrifuge_maintenance.txt::1"
+    ]
+  },
+  {
+    "query": "What is the maximum operating temperature?",
+    "relevant_chunk_ids": []
+  },
+  {
+    "query": "What is the machine's rated power consumption?",
+    "relevant_chunk_ids": []
+  }
+]
