@@ -61,3 +61,15 @@ def test_invalid_top_k_is_rejected():
 
 def test_empty_chunk_list_returns_no_results():
     assert retrieve_chunks("vibration", []) == []
+
+
+def test_retrieval_can_return_chunks_for_unsupported_question():
+    results = retrieve_chunks(
+        "What is the maximum bearing temperature?",
+        SAMPLE_CHUNKS,
+        top_k=3,
+    )
+
+    # TF-IDF may return text because some words overlap,
+    # even though the documents do not state a maximum temperature.
+    assert results

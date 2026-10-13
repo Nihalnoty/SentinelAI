@@ -32,5 +32,45 @@
   {
     "query": "What is the machine's rated power consumption?",
     "relevant_chunk_ids": []
+  },
+  {
+    "query": "The centrifuge has unusual vibration. What components should be inspected?",
+    "relevant_chunk_ids": [
+      "centrifuge_maintenance.txt::1"
+    ]
+  },
+  {
+    "query": "Which parts should be checked when abnormal vibration is observed?",
+    "relevant_chunk_ids": [
+      "centrifuge_maintenance.txt::1"
+    ]
+  },
+  {
+    "query": "What safety precautions are mentioned before inspection?",
+    "relevant_chunk_ids": [
+      "centrifuge_maintenance.txt::2"
+    ]
+  },
+  {
+    "query": "What does the document say about bearing inspection?",
+    "relevant_chunk_ids": [
+      "centrifuge_maintenance.txt::1"
+    ]
+  },
+  {
+    "query": "What is the recommended vibration limit in millimeters per second?",
+    "relevant_chunk_ids": []
+  },
+  {
+    "query": "How often should the centrifuge bearings be replaced?",
+    "relevant_chunk_ids": []
+  },
+  {
+    "query": "What lubricant grade is required for this centrifuge?",
+    "relevant_chunk_ids": []
+  },
+  {
+    "query": "What is the manufacturer's recommended torque for the mounting bolts?",
+    "relevant_chunk_ids": []
   }
 ]

@@ -1,4 +1,3 @@
-
 from pathlib import Path
 
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -12,37 +11,27 @@ def retrieve_chunks(
     query: str,
     chunks: list[dict],
     top_k: int = 3,
+    min_similarity: float = 0.0,
 ) -> list[dict]:
-    """
-    Rank document chunks by TF-IDF cosine similarity to a query.
-
-    Each chunk must contain:
-        - source: original filename
-        - chunk_index: position within the document
-        - text: chunk content
-    """
+    """Rank chunks by TF-IDF cosine similarity."""
     if not isinstance(query, str) or not query.strip():
         raise ValueError("query must be a non-empty string")
 
     if top_k <= 0:
         raise ValueError("top_k must be positive")
 
+    if not 0.0 <= min_similarity <= 1.0:
+        raise ValueError("min_similarity must be between 0 and 1")
+
     if not chunks:
         return []
 
     texts = [chunk["text"] for chunk in chunks]
-
-    # Learn vocabulary and calculate TF-IDF vectors for the chunks.
     vectorizer = TfidfVectorizer()
     document_vectors = vectorizer.fit_transform(texts)
-
-    # Represent the user's query using the same vocabulary.
     query_vector = vectorizer.transform([query])
 
-    # Calculate a similarity score between the query and each chunk.
     scores = cosine_similarity(query_vector, document_vectors).flatten()
-
-    # Rank the chunks from highest similarity to lowest.
     ranked_indices = scores.argsort()[::-1]
 
     results = []
@@ -50,8 +39,7 @@ def retrieve_chunks(
     for index in ranked_indices:
         score = float(scores[index])
 
-        # Don't return chunks that have no matching TF-IDF features.
-        if score <= 0:
+        if score <= 0 or score < min_similarity:
             continue
 
         result = dict(chunks[index])
@@ -66,24 +54,31 @@ def retrieve_chunks(
 
 def main() -> None:
     project_root = Path(__file__).resolve().parents[2]
-    knowledge_dir = project_root / "data" / "knowledge_base"
+    fixture_dir = project_root / "tests" / "fixtures"
 
-    documents = load_text_documents(knowledge_dir)
+    documents = load_text_documents(fixture_dir)
     chunks = chunk_documents(documents)
 
-    query = "abnormal vibration"
+    queries = [
+        "abnormal vibration",
+        "What should be checked if the machine shakes?",
+        "What is the maximum operating temperature?",
+        "What is the recommended vibration limit in millimeters per second?",
+        "What lubricant grade is required for this centrifuge?",
+    ]
 
-    results = retrieve_chunks(query, chunks, top_k=3)
+    for query in queries:
+        print(f"\nQuery: {query}")
 
-    print(f"Query: {query}")
-    print(f"Matching chunks: {len(results)}")
-
-    for rank, result in enumerate(results, start=1):
-        print(f"\nRank: {rank}")
-        print(f"Source: {result['source']}")
-        print(f"Chunk index: {result['chunk_index']}")
-        print(f"Similarity score: {result['score']:.4f}")
-        print(f"Text: {result['text']}")
+        for threshold in (0.0, 0.2, 0.3, 0.4, 0.5):
+            results = retrieve_chunks(
+                query,
+                chunks,
+                top_k=3,
+                min_similarity=threshold,
+            )
+            scores = [f"{item['score']:.4f}" for item in results]
+            print(f"Threshold {threshold:.1f}: {scores or 'No results'}")
 
 
 if __name__ == "__main__":

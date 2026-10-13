@@ -1,4 +1,3 @@
-
 import argparse
 import json
 from pathlib import Path
@@ -66,7 +65,16 @@ def main() -> None:
         action="store_true",
         help="Use the committed synthetic test document.",
     )
+    parser.add_argument(
+        "--min-similarity",
+        type=float,
+        default=0.0,
+        help="Minimum cosine similarity required to return a chunk.",
+    )
     args = parser.parse_args()
+
+    if not 0.0 <= args.min_similarity <= 1.0:
+        parser.error("--min-similarity must be between 0 and 1")
 
     project_root = Path(__file__).resolve().parents[2]
     evaluation_file = project_root / "evaluation" / "retrieval_queries.json"
@@ -77,6 +85,8 @@ def main() -> None:
     else:
         document_dir = project_root / "data" / "knowledge_base"
         print("Document source: local knowledge base")
+
+    print(f"Minimum similarity: {args.min_similarity:.2f}")
 
     documents = load_text_documents(document_dir)
     chunks = chunk_documents(documents)
@@ -101,7 +111,12 @@ def main() -> None:
         query = case["query"]
         relevant_ids = set(case["relevant_chunk_ids"])
 
-        results = retrieve_chunks(query, chunks, top_k=3)
+        results = retrieve_chunks(
+            query,
+            chunks,
+            top_k=3,
+            min_similarity=args.min_similarity,
+        )
         retrieved_ids = [get_chunk_id(result) for result in results]
 
         print(f"\nQuery: {query}")
