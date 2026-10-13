@@ -1,7 +1,6 @@
 """Tools for retrieving and investigating SentinelAI incidents."""
 
 import json
-from pathlib import Path
 
 import pandas as pd
 
@@ -9,6 +8,12 @@ from src.evidence.incident_evidence_analyzer import (
     INCIDENTS_PATH,
     REPORTS_DIR,
     investigate,
+)
+
+from src.schemas.incident_schemas import (
+    IncidentRequest,
+    IncidentDetails,
+    ToolResult,
 )
 
 
@@ -25,12 +30,10 @@ INCIDENT_REQUIRED_COLUMNS = [
 
 
 def get_incident_details(incident_id: str) -> dict:
-    """Retrieve the recorded details of an incident."""
+    """Retrieve and validate the recorded details of an incident."""
 
-    if not isinstance(incident_id, str) or not incident_id.strip():
-        raise ValueError("incident_id must be a non-empty string.")
-
-    incident_id = incident_id.strip()
+    request = IncidentRequest(incident_id=incident_id)
+    incident_id = request.incident_id
 
     if not INCIDENTS_PATH.exists():
         raise FileNotFoundError(
@@ -67,34 +70,37 @@ def get_incident_details(incident_id: str) -> dict:
 
     incident = matches.iloc[0]
 
-    return {
-        "incident_id": str(incident["incident_id"]),
-        "start": str(incident["start"]),
-        "end": str(incident["end"]),
-        "flagged_minutes": int(incident["flagged_minutes"]),
-        "mean_anomaly_score": float(
+    details = IncidentDetails(
+        incident_id=str(incident["incident_id"]),
+        start=incident["start"],
+        end=incident["end"],
+        flagged_minutes=int(incident["flagged_minutes"]),
+        mean_anomaly_score=float(
             incident["mean_anomaly_score"]
         ),
-        "max_anomaly_score": float(
+        max_anomaly_score=float(
             incident["max_anomaly_score"]
         ),
-        "status": str(incident["status"]),
-        "interpretation": str(incident["interpretation"]),
-    }
+        status=str(incident["status"]),
+        interpretation=str(incident["interpretation"]),
+    )
+
+    return details.model_dump(mode="json")
 
 
 def analyze_incident_evidence(incident_id: str) -> dict:
-    """Run the existing evidence analyzer and return its JSON report."""
+    """Run evidence analysis and return a validated tool result."""
 
-    # Validate the ID before running the analysis.
+    request = IncidentRequest(incident_id=incident_id)
+    incident_id = request.incident_id
+
+    # Verify that the requested incident exists before analysis.
     get_incident_details(incident_id)
 
-    # Reuse the existing analyzer instead of duplicating its logic.
+    # Reuse the existing evidence analyzer.
     investigate(incident_id)
 
-    report_path = (
-        REPORTS_DIR / f"{incident_id}_evidence.json"
-    )
+    report_path = REPORTS_DIR / f"{incident_id}_evidence.json"
 
     if not report_path.exists():
         raise FileNotFoundError(
@@ -104,9 +110,19 @@ def analyze_incident_evidence(incident_id: str) -> dict:
     with report_path.open("r", encoding="utf-8") as file:
         report = json.load(file)
 
-    if report.get("incident", {}).get("incident_id") != incident_id:
+    report_incident_id = (
+        report.get("incident", {}).get("incident_id")
+    )
+
+    if report_incident_id != incident_id:
         raise ValueError(
             "Evidence report incident ID does not match the request."
         )
 
-    return report
+    result = ToolResult(
+        tool_name="analyze_incident_evidence",
+        incident_id=incident_id,
+        data=report,
+    )
+
+    return result.model_dump(mode="json")
