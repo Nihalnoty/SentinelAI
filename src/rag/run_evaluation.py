@@ -1,4 +1,5 @@
 
+import argparse
 import json
 from pathlib import Path
 
@@ -17,7 +18,7 @@ def validate_evaluation_cases(
     evaluation_cases: list[dict],
     chunks: list[dict],
 ) -> None:
-    """Validate queries and relevant chunk IDs."""
+    """Validate queries and their relevant chunk IDs."""
     if not isinstance(evaluation_cases, list) or not evaluation_cases:
         raise ValueError("Evaluation dataset must be a non-empty list")
 
@@ -57,12 +58,33 @@ def validate_evaluation_cases(
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Evaluate SentinelAI RAG retrieval."
+    )
+    parser.add_argument(
+        "--use-fixture",
+        action="store_true",
+        help="Use the committed synthetic test document.",
+    )
+    args = parser.parse_args()
+
     project_root = Path(__file__).resolve().parents[2]
-    knowledge_dir = project_root / "data" / "knowledge_base"
     evaluation_file = project_root / "evaluation" / "retrieval_queries.json"
 
-    documents = load_text_documents(knowledge_dir)
+    if args.use_fixture:
+        document_dir = project_root / "tests" / "fixtures"
+        print("Document source: committed synthetic test fixture")
+    else:
+        document_dir = project_root / "data" / "knowledge_base"
+        print("Document source: local knowledge base")
+
+    documents = load_text_documents(document_dir)
     chunks = chunk_documents(documents)
+
+    if not chunks:
+        raise ValueError(
+            "No chunks were created. Check the selected document directory."
+        )
 
     with evaluation_file.open("r", encoding="utf-8") as file:
         evaluation_cases = json.load(file)
