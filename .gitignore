@@ -43,3 +43,6 @@ reports/anomaly_results.csv
 reports/anomalies_three_sensors.csv
 reports/anomalies_four_sensors.csv
 reports/temporal_anomaly_results.csv
+# Local RAG knowledge documents (do not commit source documents)
+data/knowledge_base/*
+!data/knowledge_base/.gitkeep

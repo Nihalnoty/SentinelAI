@@ -1,0 +1,6 @@
+﻿Document: Centrifuge Maintenance Guide
+Section: Abnormal Vibration
+
+If abnormal vibration is observed, inspect the mounting bolts and bearing condition according to the approved maintenance procedure. Follow the site's safety procedures before inspection.
+
+TEST FIXTURE DISCLAIMER: The text above is synthetic software-testing material. It is not a real manufacturer's manual or an approved industrial procedure.
