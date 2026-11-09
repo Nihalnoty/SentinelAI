@@ -1,26 +1,38 @@
-
 import re
 from pathlib import Path
 
 from src.rag.ingest import load_text_documents
 
 
-def _split_long_text(text: str, chunk_size: int) -> list[str]:
-    """Split oversized text at word boundaries where possible."""
+def _split_long_text(
+    text: str,
+    chunk_size: int,
+    overlap: int = 0,
+) -> list[str]:
+    """Split oversized text while preserving character overlap."""
+
     words = text.split()
     pieces = []
     current = ""
 
     for word in words:
-        # A single oversized token cannot be kept within the limit
-        # without splitting that token.
         if len(word) > chunk_size:
             if current:
                 pieces.append(current)
                 current = ""
 
-            for start in range(0, len(word), chunk_size):
-                pieces.append(word[start:start + chunk_size])
+            step = chunk_size - overlap
+            start = 0
+
+            while start < len(word):
+                piece = word[start:start + chunk_size]
+                pieces.append(piece)
+
+                if start + chunk_size >= len(word):
+                    break
+
+                start += step
+
             continue
 
         candidate = f"{current} {word}".strip() if current else word
@@ -40,18 +52,12 @@ def _split_long_text(text: str, chunk_size: int) -> list[str]:
 
 def chunk_text(
     text: str,
-    chunk_size: int = 100,
-    overlap: int = 20,
-    sentence_aware: bool = False,
+    chunk_size: int = 1200,
+    overlap: int = 180,
+    sentence_aware: bool = True,
 ) -> list[str]:
-    """
-    Split text into bounded chunks.
+    """Split text into bounded chunks with configurable overlap."""
 
-    Character mode preserves the original behavior.
-    Sentence-aware mode groups complete sentences when possible,
-    splits oversized sentences at word boundaries, and overlaps
-    using whole words rather than arbitrary character fragments.
-    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
@@ -96,15 +102,22 @@ def chunk_text(
     current = ""
 
     for sentence in sentences:
+
         if len(sentence) > chunk_size:
             if current:
                 chunks.append(current)
                 current = ""
 
-            chunks.extend(_split_long_text(sentence, chunk_size))
+            chunks.extend(
+                _split_long_text(sentence, chunk_size, overlap)
+            )
             continue
 
-        candidate = f"{current} {sentence}".strip() if current else sentence
+        candidate = (
+            f"{current} {sentence}".strip()
+            if current
+            else sentence
+        )
 
         if len(candidate) <= chunk_size:
             current = candidate
@@ -113,7 +126,6 @@ def chunk_text(
         if current:
             chunks.append(current)
 
-        # Add whole-word overlap from the preceding chunk.
         overlap_words = []
         overlap_length = 0
 
@@ -142,17 +154,19 @@ def chunk_text(
 
 def chunk_documents(
     documents: list[dict],
-    chunk_size: int = 100,
-    overlap: int = 20,
-    sentence_aware: bool = False,
+    chunk_size: int = 1200,
+    overlap: int = 180,
+    sentence_aware: bool = True,
 ) -> list[dict]:
     """Chunk documents while preserving source metadata."""
+
     if not isinstance(documents, list):
         raise TypeError("documents must be a list")
 
     results = []
 
     for index, document in enumerate(documents):
+
         if not isinstance(document, dict):
             raise TypeError(
                 f"Document at index {index} must be a dictionary"
@@ -179,7 +193,13 @@ def chunk_documents(
         )
 
         for chunk_index, chunk in enumerate(text_chunks):
+
             results.append({
+                **{
+                    key: value
+                    for key, value in document.items()
+                    if key != "text"
+                },
                 "source": source,
                 "chunk_index": chunk_index,
                 "text": chunk,
@@ -189,11 +209,16 @@ def chunk_documents(
 
 
 if __name__ == "__main__":
+
     project_root = Path(__file__).resolve().parents[2]
     knowledge_dir = project_root / "data" / "knowledge_base"
 
     documents = load_text_documents(knowledge_dir)
-    chunks = chunk_documents(documents, sentence_aware=True)
+
+    chunks = chunk_documents(
+        documents,
+        sentence_aware=True,
+    )
 
     print(f"Documents loaded: {len(documents)}")
     print(f"Chunks created: {len(chunks)}")
