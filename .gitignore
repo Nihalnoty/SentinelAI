@@ -46,3 +46,4 @@ reports/temporal_anomaly_results.csv
 # Local RAG knowledge documents (do not commit source documents)
 data/knowledge_base/*
 !data/knowledge_base/.gitkeep
+.venv-api/
