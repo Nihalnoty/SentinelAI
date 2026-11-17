@@ -1,0 +1,114 @@
+{
+    "evaluation_name": "SentinelAI Offline Factual Accuracy Evaluation",
+    "evaluation_date": "2026-11-15T19:25:38.036324+00:00",
+    "metrics": {
+        "total_tests": 7,
+        "passed": 7,
+        "failed": 0,
+        "pass_rate_percent": 100.0,
+        "evaluation_mode": "offline_mock",
+        "live_gemini_tested": false
+    },
+    "results": [
+        {
+            "test_id": "FACT-001",
+            "category": "sensor_identification",
+            "status": "PASS",
+            "expected_answerable": true,
+            "actual_answerable": true,
+            "answer": "The four recorded sensor channels are Vibration, Temp_Solid, Temp_Liquid and Torque.",
+            "citations": [
+                "cfg42_research_metadata.txt::9",
+                "cfg42_research_metadata.txt::6",
+                "s41597-026-07665-7.pdf::4"
+            ],
+            "validation_failures": [],
+            "response_time_seconds": 0.1528
+        },
+        {
+            "test_id": "FACT-002",
+            "category": "measurement_units",
+            "status": "PASS",
+            "expected_answerable": true,
+            "actual_answerable": true,
+            "answer": "Torque is expressed as a percentage of nominal load. Vibration is measured in mm/s RMS. Temp_Solid and Temp_Liquid are measured in degrees Celsius.",
+            "citations": [
+                "s41597-026-07665-7.pdf::23",
+                "cfg42_research_metadata.txt::4",
+                "s41597-026-07665-7.pdf::27"
+            ],
+            "validation_failures": [],
+            "response_time_seconds": 0.1206
+        },
+        {
+            "test_id": "FACT-003",
+            "category": "temperature_threshold_integrity",
+            "status": "PASS",
+            "expected_answerable": true,
+            "actual_answerable": true,
+            "answer": "No. The available evidence is ambiguous and does not unambiguously establish 85 °C as the official Sulzer trip threshold for the released bearing temperature channels.",
+            "citations": [
+                "cfg42_research_metadata.txt::5",
+                "cfg42_research_metadata.txt::7",
+                "cfg42_research_metadata.txt::9"
+            ],
+            "validation_failures": [],
+            "response_time_seconds": 0.1333
+        },
+        {
+            "test_id": "FACT-004",
+            "category": "unavailable_sensor_integrity",
+            "status": "PASS",
+            "expected_answerable": false,
+            "actual_answerable": false,
+            "answer": "I cannot answer this question reliably because the available knowledge-base evidence is insufficient.",
+            "citations": [],
+            "validation_failures": [],
+            "response_time_seconds": 0.1401
+        },
+        {
+            "test_id": "FACT-005",
+            "category": "oem_limit_integrity",
+            "status": "PASS",
+            "expected_answerable": false,
+            "actual_answerable": false,
+            "answer": "I cannot answer this question reliably because the available knowledge-base evidence is insufficient.",
+            "citations": [],
+            "validation_failures": [],
+            "response_time_seconds": 0.1488
+        },
+        {
+            "test_id": "FACT-006",
+            "category": "root_cause_integrity",
+            "status": "PASS",
+            "expected_answerable": false,
+            "actual_answerable": false,
+            "answer": "I cannot answer this question reliably because the available knowledge-base evidence is insufficient.",
+            "citations": [],
+            "validation_failures": [],
+            "response_time_seconds": 0.1295
+        },
+        {
+            "test_id": "FACT-007",
+            "category": "sampling_limitations",
+            "status": "PASS",
+            "expected_answerable": true,
+            "actual_answerable": true,
+            "answer": "The dataset uses a one minute sampling interval. It cannot resolve high-frequency bearing defect frequencies or gear-mesh harmonics.",
+            "citations": [
+                "cfg42_research_metadata.txt::3",
+                "cfg42_research_metadata.txt::9",
+                "cfg42_research_metadata.txt::6"
+            ],
+            "validation_failures": [],
+            "response_time_seconds": 0.122
+        }
+    ],
+    "limitations": [
+        "Uses controlled mock responses, not live Gemini.",
+        "Tests actual RAG retrieval and pipeline validation.",
+        "Keyword checks do not prove semantic correctness.",
+        "Citation matching does not prove claim entailment.",
+        "Does not establish real Gemini factual accuracy."
+    ]
+}

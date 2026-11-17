@@ -1,0 +1,234 @@
+{
+    "evaluation_name": "SentinelAI Factual Accuracy and Hallucination Evaluation",
+    "phase": "5.4",
+    "evaluation_date": "2026-11-15T21:31:03.373674+00:00",
+    "model": "openai/gpt-oss-120b",
+    "provider": "groq",
+    "similarity_threshold": 0.2,
+    "metrics": {
+        "total_tests": 7,
+        "passed": 7,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed_tests": 7,
+        "pass_rate_percent": 100.0,
+        "answerability_checks_passed": 7,
+        "factual_checks_passed": 7,
+        "mean_response_time_seconds": 3.581,
+        "phase_5_4_complete": true
+    },
+    "results": [
+        {
+            "test_id": "FACT-001",
+            "category": "sensor_identification",
+            "status": "PASS",
+            "expected_answerable": true,
+            "actual_answerable": true,
+            "answerability_passed": true,
+            "factual_checks_passed": true,
+            "passed": true,
+            "answer": "The publicly released sensor channels are torque, vibration, Temp_Solid, and Temp_Liquid.",
+            "citations": [
+                "s41597-026-07665-7.pdf::4",
+                "cfg42_research_metadata.txt::6"
+            ],
+            "retrieved_evidence": [
+                {
+                    "chunk_id": "cfg42_research_metadata.txt::9",
+                    "score": 0.3129
+                },
+                {
+                    "chunk_id": "cfg42_research_metadata.txt::6",
+                    "score": 0.2601
+                },
+                {
+                    "chunk_id": "s41597-026-07665-7.pdf::4",
+                    "score": 0.2315
+                }
+            ],
+            "validation_failures": [],
+            "response_time_seconds": 16.081,
+            "error": null
+        },
+        {
+            "test_id": "FACT-002",
+            "category": "measurement_units",
+            "status": "PASS",
+            "expected_answerable": true,
+            "actual_answerable": true,
+            "answerability_passed": true,
+            "factual_checks_passed": true,
+            "passed": true,
+            "answer": "Torque is reported in percent of nominal load (%), vibration is reported as RMS velocity in millimetres per second (mm/s RMS), and both Temp_Solid and Temp_Liquid are reported in degrees Celsius (°C).",
+            "citations": [
+                "s41597-026-07665-7.pdf::23",
+                "cfg42_research_metadata.txt::4",
+                "s41597-026-07665-7.pdf::27"
+            ],
+            "retrieved_evidence": [
+                {
+                    "chunk_id": "s41597-026-07665-7.pdf::23",
+                    "score": 0.2461
+                },
+                {
+                    "chunk_id": "cfg42_research_metadata.txt::4",
+                    "score": 0.243
+                },
+                {
+                    "chunk_id": "s41597-026-07665-7.pdf::27",
+                    "score": 0.2363
+                }
+            ],
+            "validation_failures": [],
+            "response_time_seconds": 2.019,
+            "error": null
+        },
+        {
+            "test_id": "FACT-003",
+            "category": "temperature_threshold_integrity",
+            "status": "PASS",
+            "expected_answerable": true,
+            "actual_answerable": true,
+            "answerability_passed": true,
+            "factual_checks_passed": true,
+            "passed": true,
+            "answer": "No, the evidence does not unambiguously establish 85 °C as the official Sulzer trip threshold for the released bearing temperature channels. The paper identifies the 85 °C limit as an oil‑temperature alarm, and notes that its context is ambiguous and should not be applied automatically to bearing‑temperature channels.",
+            "citations": [
+                "cfg42_research_metadata.txt::5",
+                "cfg42_research_metadata.txt::7"
+            ],
+            "retrieved_evidence": [
+                {
+                    "chunk_id": "cfg42_research_metadata.txt::5",
+                    "score": 0.2435
+                },
+                {
+                    "chunk_id": "cfg42_research_metadata.txt::7",
+                    "score": 0.2317
+                },
+                {
+                    "chunk_id": "cfg42_research_metadata.txt::9",
+                    "score": 0.2149
+                }
+            ],
+            "validation_failures": [],
+            "response_time_seconds": 1.64,
+            "error": null
+        },
+        {
+            "test_id": "FACT-004",
+            "category": "unavailable_sensor_integrity",
+            "status": "PASS",
+            "expected_answerable": false,
+            "actual_answerable": false,
+            "answerability_passed": true,
+            "factual_checks_passed": true,
+            "passed": true,
+            "answer": "I cannot answer this question reliably because the available knowledge-base evidence is insufficient.",
+            "citations": [],
+            "retrieved_evidence": [
+                {
+                    "chunk_id": "s41597-026-07665-7.pdf::4",
+                    "score": 0.3654
+                },
+                {
+                    "chunk_id": "cfg42_research_metadata.txt::1",
+                    "score": 0.2937
+                },
+                {
+                    "chunk_id": "cfg42_research_metadata.txt::2",
+                    "score": 0.2815
+                }
+            ],
+            "validation_failures": [],
+            "response_time_seconds": 1.753,
+            "error": null
+        },
+        {
+            "test_id": "FACT-005",
+            "category": "oem_limit_integrity",
+            "status": "PASS",
+            "expected_answerable": false,
+            "actual_answerable": false,
+            "answerability_passed": true,
+            "factual_checks_passed": true,
+            "passed": true,
+            "answer": "I cannot answer this question reliably because the available knowledge-base evidence is insufficient.",
+            "citations": [],
+            "retrieved_evidence": [
+                {
+                    "chunk_id": "cfg42_sensor_relationships.txt::2",
+                    "score": 0.2641
+                },
+                {
+                    "chunk_id": "README_PHASE1.txt::0",
+                    "score": 0.2167
+                },
+                {
+                    "chunk_id": "cfg42_sensor_relationships.txt::0",
+                    "score": 0.2123
+                }
+            ],
+            "validation_failures": [],
+            "response_time_seconds": 1.692,
+            "error": null
+        },
+        {
+            "test_id": "FACT-006",
+            "category": "root_cause_integrity",
+            "status": "PASS",
+            "expected_answerable": false,
+            "actual_answerable": false,
+            "answerability_passed": true,
+            "factual_checks_passed": true,
+            "passed": true,
+            "answer": "I cannot answer this question reliably because the available knowledge-base evidence is insufficient.",
+            "citations": [],
+            "retrieved_evidence": [],
+            "validation_failures": [],
+            "response_time_seconds": 0.301,
+            "error": null
+        },
+        {
+            "test_id": "FACT-007",
+            "category": "sampling_limitations",
+            "status": "PASS",
+            "expected_answerable": true,
+            "actual_answerable": true,
+            "answerability_passed": true,
+            "factual_checks_passed": true,
+            "passed": true,
+            "answer": "No. The one‑minute sampling interval yields a sampling frequency of about 0.0167 Hz (Nyquist ≈ 0.0083 Hz), which is far below the Hz‑to‑kHz range where bearing defect frequencies and gear‑mesh harmonics reside. Consequently, the dataset cannot resolve those high‑frequency phenomena.",
+            "citations": [
+                "cfg42_research_metadata.txt::3",
+                "cfg42_research_metadata.txt::6"
+            ],
+            "retrieved_evidence": [
+                {
+                    "chunk_id": "cfg42_research_metadata.txt::3",
+                    "score": 0.5774
+                },
+                {
+                    "chunk_id": "cfg42_research_metadata.txt::9",
+                    "score": 0.5013
+                },
+                {
+                    "chunk_id": "cfg42_research_metadata.txt::6",
+                    "score": 0.4813
+                }
+            ],
+            "validation_failures": [],
+            "response_time_seconds": 1.579,
+            "error": null
+        }
+    ],
+    "limitations": [
+        "Small evaluation dataset.",
+        "Live Gemini responses may vary between runs.",
+        "Keyword checks are not semantic entailment.",
+        "Citation matching does not prove that a source supports every claim in an answer.",
+        "A human must review factual correctness.",
+        "Passing these tests does not establish industrial or OEM certification."
+    ]
+}
